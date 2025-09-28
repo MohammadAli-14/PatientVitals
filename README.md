@@ -4,8 +4,7 @@ A modern, professional web application for healthcare professionals to record, m
 
 ## 🚀 Live Demo
 
-[![Render Deployment](https://img.shields.io/badge/Render-Live%20Demo-brightgreen)](https://your-app-name.onrender.com)  
-*Replace with your actual Render URL after deployment*
+[![Render Deployment](https://patientvitals.onrender.com)  
 
 ## ✨ Features
 
@@ -81,8 +80,8 @@ Create virtual environment
 
 bash
 python -m venv venv
-# On Windows: venv\Scripts\activate
-# On Mac/Linux: source venv/bin/activate
+On Windows: venv\Scripts\activate
+On Mac/Linux: source venv/bin/activate
 Install dependencies
 
 bash
@@ -92,8 +91,8 @@ Create a .env file:
 
 env
 MONGO_URI=mongodb://localhost:27017/vitals_db
-# OR for MongoDB Atlas:
-# MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/vitals_db
+OR for MongoDB Atlas:
+MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/vitals_db
 Run the application
 
 bash
