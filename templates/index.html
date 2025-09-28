@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Patient Vitals Management</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Professional patient vitals recording and management system" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Patient Vitals Management</h1>
+      <p>Securely record and manage patient vital signs with instant PDF report generation</p>
+    </header>
+
+    <section class="card">
+      <h2>Patient Vitals Entry</h2>
+      <form id="vitalsForm" class="form-grid">
+        <!-- Patient Information -->
+        <div class="form-group">
+          <label for="patient_id">Patient ID *</label>
+          <input type="text" id="patient_id" required placeholder="Enter patient identifier" />
+        </div>
+        
+        <div class="form-group">
+          <label for="patient_name">Patient Name</label>
+          <input type="text" id="patient_name" placeholder="Full name" />
+        </div>
+
+        <!-- Vital Signs -->
+        <div class="form-group">
+          <label for="heart_rate">Heart Rate (bpm)</label>
+          <input type="number" id="heart_rate" min="0" max="300" placeholder="e.g., 72" />
+        </div>
+        
+        <div class="form-group">
+          <label for="respiratory_rate">Respiratory Rate</label>
+          <input type="number" id="respiratory_rate" min="0" max="100" placeholder="Breaths per minute" />
+        </div>
+
+        <!-- Blood Pressure Row -->
+        <div class="form-group row-group">
+          <div class="form-group">
+            <label for="systolic">Systolic BP</label>
+            <input type="number" id="systolic" min="0" max="300" placeholder="Systolic pressure" />
+          </div>
+          
+          <div class="form-group">
+            <label for="diastolic">Diastolic BP</label>
+            <input type="number" id="diastolic" min="0" max="300" placeholder="Diastolic pressure" />
+          </div>
+        </div>
+
+        <!-- Additional Metrics -->
+        <div class="form-group">
+          <label for="temperature_c">Temperature (°C)</label>
+          <input type="number" step="0.1" id="temperature_c" min="30" max="45" placeholder="e.g., 36.6" />
+        </div>
+        
+        <div class="form-group">
+          <label for="oxygen_saturation">Oxygen Saturation (%)</label>
+          <input type="number" id="oxygen_saturation" min="0" max="100" placeholder="e.g., 98" />
+        </div>
+
+        <!-- Notes -->
+        <div class="form-group full-width">
+          <label for="notes">Clinical Notes</label>
+          <textarea id="notes" placeholder="Additional observations, medications, or relevant information..."></textarea>
+        </div>
+
+        <!-- Actions -->
+        <div class="actions">
+          <button type="submit" class="btn primary">
+            💾 Save Vitals
+          </button>
+          <button type="button" id="downloadBtn" class="btn secondary" disabled>
+            📄 Download PDF Report
+          </button>
+        </div>
+
+        <!-- Message Area -->
+        <div id="message" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <small>© 2024 Medical Records System • Built with FastAPI</small>
+    </footer>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
