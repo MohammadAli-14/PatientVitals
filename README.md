@@ -2,10 +2,6 @@
 
 A modern, professional web application for healthcare professionals to record, manage, and generate PDF reports of patient vital signs. Built with FastAPI, MongoDB, and modern web technologies.
 
-## 🚀 Live Demo
-
-[![Render Deployment](https://patientvitals.onrender.com)  
-
 ## ✨ Features
 
 ### 🏥 Core Functionality
